@@ -1,28 +1,26 @@
 
-function add (firstNumber, secondNumber){
-    firstNumber = prompt('Pick a number');
-    secondNumber = prompt('pick another number');
-    const sum = (+firstNumber) + (+secondNumber);
+function add (firstNumberAdd, secondNumberAdd){
+    const sum = (+firstNumberAdd) + (+secondNumberAdd);
     console.log(sum);
 }
 
-function subtract (firstNumber, secondNumber){
-    firstNumber = prompt('Pick a number');
-    secondNumber = prompt('pick another number');
-    const sum = (+firstNumber) - (+secondNumber);
+function subtract (firstNumberSubctract, secondNumberSubtract){
+    const sum = (+firstNumberSubctract) - (+secondNumberSubtract);
     console.log(sum);
 }
 
-function multiply (firstNumber, secondNumber){
-    firstNumber = prompt('Pick a number');
-    secondNumber = prompt('pick another number');
-    const sum = (+firstNumber) * (+secondNumber);
+function multiply (firstNumberMultiply, secondNumberMultiply){
+    const sum = (+firstNumberMultiply) * (+secondNumberMultiply);
     console.log(sum);
 }
 
-function divide (firstNumber, secondNumber){
+function divide (firstNumberDivide, secondNumberDivide){   
+    const sum = (+firstNumberDivide) / (+secondNumberDivide);
+    console.log(sum);
+}
+
+function operate(){
     firstNumber = prompt('Pick a number');
     secondNumber = prompt('pick another number');
-    const sum = (+firstNumber) / (+secondNumber);
-    console.log(sum);
+    divide(firstNumber, secondNumber);
 }

@@ -1,0 +1,39 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.calculator {
+  display: flex;
+  width: 430px;
+  height: 430px;
+}
+
+.result-screen {
+  display: flex;
+  width: 400px;
+  height: 50px;
+  align-items: flex-end;
+  justify-content: end;
+  font-size: 40px;
+  border: solid black 1px;
+}
+
+.number-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 420px;
+  gap: 10px;
+}
+
+.operator-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+}
