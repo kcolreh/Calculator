@@ -12,12 +12,13 @@
 
 .result-screen {
   display: flex;
-  width: 400px;
+  width: 430px;
   height: 50px;
   align-items: flex-end;
   justify-content: end;
   font-size: 40px;
   border: solid black 1px;
+  margin-bottom: 10px;
 }
 
 .number-container {

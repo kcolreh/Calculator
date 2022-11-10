@@ -1,26 +1,62 @@
+const display = document.querySelector('#display')
+const buttons = document.querySelectorAll('.btn');
+const clear = document.getElementById('clear');
+const add = document.getElementById('add');
+const subtract = document.getElementById('subtract');
+const multiply = document.getElementById('multiply');
+const divide = document.getElementById('divide');
 
-function add (firstNumberAdd, secondNumberAdd){
+
+clear.addEventListener('click', () => {
+    display.textContent = '';
+})
+
+buttons.forEach(button => {
+    button.addEventListener('click', getButtonValue);
+})
+
+
+
+
+function getButtonValue() {
+    display.textContent += this.value;
+}
+
+function addFunc(firstNumberAdd, secondNumberAdd) {
     const sum = (+firstNumberAdd) + (+secondNumberAdd);
     console.log(sum);
 }
 
-function subtract (firstNumberSubctract, secondNumberSubtract){
+function subtractFunc(firstNumberSubctract, secondNumberSubtract) {
     const sum = (+firstNumberSubctract) - (+secondNumberSubtract);
     console.log(sum);
 }
 
-function multiply (firstNumberMultiply, secondNumberMultiply){
+function multiplyFunc(firstNumberMultiply, secondNumberMultiply) {
     const sum = (+firstNumberMultiply) * (+secondNumberMultiply);
     console.log(sum);
 }
 
-function divide (firstNumberDivide, secondNumberDivide){   
+function divideFunc(firstNumberDivide, secondNumberDivide) {
     const sum = (+firstNumberDivide) / (+secondNumberDivide);
     console.log(sum);
 }
 
-function operate(){
-    firstNumber = prompt('Pick a number');
-    secondNumber = prompt('pick another number');
+function operate() {
     divide(firstNumber, secondNumber);
 }
+
+/*
+firstNumber = getbuttonValue
+second number = getbuttonValue2
+
+if (click === add) {
+    add()
+} else if (click === subtract){
+    subtract()
+}else if (click === multiply){
+    multiply()
+}else if (click === divide){
+    divide()
+}
+*/
