@@ -10,15 +10,25 @@
   height: 430px;
 }
 
-.result-screen {
+#main-display {
   display: flex;
+  flex-direction: column;
   width: 430px;
-  height: 50px;
+  height: 10  0px;
   align-items: flex-end;
   justify-content: end;
-  font-size: 40px;
   border: solid black 1px;
+  gap: 5px;
+  padding: 10px;
   margin-bottom: 10px;
+}
+
+.display-screen{
+  font-size: 25px;
+}
+
+.display-screen2{
+  font-size: 15px;
 }
 
 .number-container {
@@ -35,6 +45,11 @@
 }
 
 .btn {
+  width: 100px;
+  height: 100px;
+}
+
+.operator{
   width: 100px;
   height: 100px;
 }

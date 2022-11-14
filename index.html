@@ -7,7 +7,10 @@
     <title>Calculator</title>
   </head>
   <body>
-    <div id="display" class="result-screen"></div>
+    <div id="main-display">
+      <div id="display-2" class="display-screen2"></div>
+      <div id="display" class="display-screen"></div>
+    </div>
     <div class="calculator">
       <div class="number-container">
         <button id="one" value="1" class="btn">1</button>
@@ -21,14 +24,14 @@
         <button id="nine" value="9" class="btn">9</button>
         <button id="clear" class="btn">C</button>
         <button id="zero" value="0" class="btn">0</button>
-        <button id="dot" class="btn">.</button>
+        <button id="dot" value="." class="btn">.</button>
       </div>
       <div class="operator-container">
-        <button id="add" class="btn">+</button>
-        <button id="minus" class="btn">-</button>
-        <button id="divide" class="btn">/</button>
-        <button id="multiply" class="btn">*</button>
-        <button id="equals" class="btn">=</button>
+        <button id="add" value="add" class="operator">+</button>
+        <button id="subtract" value="subtract" class="operator">-</button>
+        <button id="divide" value="divide" class="operator">/</button>
+        <button id="multiply" value="multiply" class="operator">*</button>
+        <button id="equals" class="operatorE">=</button>
       </div>
     </div>
   </body>
