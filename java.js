@@ -59,11 +59,25 @@ equals.addEventListener('click', () => {
     }
 });
 
+function equalsAl() {
+    if (display2.textContent.includes('+')) {
+        addFunc(firstNumber, secondNumber)
+    } else if (display2.textContent.includes('-')) {
+        subtractFunc(firstNumber, secondNumber);
+    } else if (display2.textContent.includes('x')) {
+        multiplyFunc(firstNumber, secondNumber);
+    } else if (display2.textContent.includes('/')) {
+        divideFunc(firstNumber, secondNumber);
+    }
+}
+
 //Operator buttons to clear the displays and values
 add.addEventListener('click', () => {
     if (typeof firstNumber === 'number' && secondNumber === '') {
         display.textContent = '';
         return display2.textContent = firstNumber + '+';
+    } else if (firstNumber != '' && secondNumber != '') {
+        equalsAl()
     }
     display2.textContent = firstNumber + '+';
     display.textContent = '';
@@ -73,6 +87,8 @@ subtract.addEventListener('click', () => {
     if (typeof firstNumber === 'number' && secondNumber === '') {
         display.textContent = '';
         return display2.textContent = firstNumber + '-';
+    } else if (firstNumber != '' && secondNumber != '') {
+        equalsAl()
     }
     display2.textContent = firstNumber + '-';
     display.textContent = '';
@@ -82,6 +98,8 @@ multiply.addEventListener('click', () => {
     if (typeof firstNumber === 'number' && secondNumber === '') {
         display.textContent = '';
         return display2.textContent = firstNumber + 'x';
+    } else if (firstNumber != '' && secondNumber != '') {
+        equalsAl()
     }
     display2.textContent = firstNumber + 'x';
     display.textContent = '';
@@ -91,12 +109,14 @@ divide.addEventListener('click', () => {
     if (typeof firstNumber === 'number' && secondNumber === '') {
         display.textContent = '';
         return display2.textContent = firstNumber + '/';
+    } else if (firstNumber != '' && secondNumber != '') {
+        equalsAl()
     }
     display2.textContent = firstNumber + '/';
     display.textContent = '';
 });
 
-
+//Clears the displays and values
 clear.addEventListener('click', () => {
     display.textContent = '';
     display2.textContent = '';
