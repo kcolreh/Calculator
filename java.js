@@ -40,6 +40,7 @@ buttons.forEach(button => {
             return secondNumber = display.textContent;
         } else (button.className === 'btn'); {
             const number = button.value;
+            //display.textContent = '';
             display.textContent += number;
             firstNumber = display.textContent;
         }
@@ -47,17 +48,7 @@ buttons.forEach(button => {
 });
 
 //calls for the functions to get the answer
-equals.addEventListener('click', () => {
-    if (display2.textContent.includes('+')) {
-        addFunc(firstNumber, secondNumber)
-    } else if (display2.textContent.includes('-')) {
-        subtractFunc(firstNumber, secondNumber);
-    } else if (display2.textContent.includes('x')) {
-        multiplyFunc(firstNumber, secondNumber);
-    } else if (display2.textContent.includes('/')) {
-        divideFunc(firstNumber, secondNumber);
-    }
-});
+equals.addEventListener('click', equalsAl)
 
 function equalsAl() {
     if (display2.textContent.includes('+')) {
