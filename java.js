@@ -12,9 +12,6 @@ const equals = document.getElementById('equals');
 let firstNumber = '';
 let secondNumber = '';
 
-
-
-
 //Gets imput from numbers and display them on the screen.
 buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -38,9 +35,10 @@ buttons.forEach(button => {
             const number = button.value;
             display.textContent += number;
             return secondNumber = display.textContent;
+        } else if (display.textContent.includes('.')) {
+            document.getElementById('dot').value = '';
         } else (button.className === 'btn'); {
             const number = button.value;
-            //display.textContent = '';
             display.textContent += number;
             firstNumber = display.textContent;
         }
@@ -120,7 +118,7 @@ clear.addEventListener('click', () => {
 function addFunc(firstNumberAdd, secondNumberAdd) {
     let sum = (+firstNumberAdd) + (+secondNumberAdd);
     display2.textContent = '';
-    display.textContent = sum;
+    display.textContent = Math.round(sum * 1000) / 1000;
     firstNumber = sum;
     secondNumber = '';
 }
@@ -128,7 +126,7 @@ function addFunc(firstNumberAdd, secondNumberAdd) {
 function subtractFunc(firstNumberSubctract, secondNumberSubtract) {
     const sum = (firstNumberSubctract) - (secondNumberSubtract);
     display2.textContent = '';
-    display.textContent = sum;
+    display.textContent = Math.round(sum * 1000) / 1000;
     firstNumber = sum;
     secondNumber = '';
 }
@@ -136,15 +134,19 @@ function subtractFunc(firstNumberSubctract, secondNumberSubtract) {
 function multiplyFunc(firstNumberMultiply, secondNumberMultiply) {
     const sum = (firstNumberMultiply) * (secondNumberMultiply);
     display2.textContent = '';
-    display.textContent = sum;
+    display.textContent = Math.round(sum * 1000) / 1000;
     firstNumber = sum;
     secondNumber = '';
 }
 
 function divideFunc(firstNumberDivide, secondNumberDivide) {
+    if (firstNumberDivide === '0' || secondNumberDivide === '0') {
+        display.textContent = '';
+        return display2.textContent = 'Dividing by 0? tsk tsk tsk :('
+    }
     const sum = (firstNumberDivide) / (secondNumberDivide);
     display2.textContent = '';
-    display.textContent = sum;
+    display.textContent = Math.round(sum * 1000) / 1000;
     firstNumber = sum;
     secondNumber = '';
 }
