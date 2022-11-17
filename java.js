@@ -8,6 +8,7 @@ const subtract = document.getElementById('subtract');
 const multiply = document.getElementById('multiply');
 const divide = document.getElementById('divide');
 const equals = document.getElementById('equals');
+const backspace = document.getElementById('clearOne');
 
 let firstNumber = '';
 let secondNumber = '';
@@ -60,7 +61,7 @@ function equalsAl() {
     }
 }
 
-//Operator buttons to clear the displays and values
+//Operator buttons
 add.addEventListener('click', () => {
     if (typeof firstNumber === 'number' && secondNumber === '') {
         display.textContent = '';
@@ -112,6 +113,17 @@ clear.addEventListener('click', () => {
     firstNumber = '';
     secondNumber = '';
 });
+
+//Clears single character from displays
+backspace.addEventListener('click', () => {
+    let deleteOne = display.textContent;
+    let deleteTwo = display2.textContent;
+    if (display2.textContent === '') {
+        display.textContent = deleteOne.slice(1);
+    } else if (display.textContent === ''){
+        display2.textContent = deleteTwo.slice(0, -1);
+    }
+})
 
 
 //Functions to calculate the inputs
