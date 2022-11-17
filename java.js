@@ -1,4 +1,4 @@
-const display = document.querySelector('#display')
+const display = document.querySelector('#display');
 const display2 = document.querySelector('#display-2')
 const buttons = document.querySelectorAll('.btn');
 const buttonsOperators = document.querySelectorAll('.operator')
@@ -16,7 +16,9 @@ let secondNumber = '';
 //Gets imput from numbers and display them on the screen.
 buttons.forEach(button => {
     button.addEventListener('click', () => {
-        if (firstNumber === '' && secondNumber != '') {
+        if (display.textContent.length > 10) { //Limits the max length of Display 
+            display.textContent = display.textContent.slice(0, 12);
+        } else if (firstNumber === '' && secondNumber != '') {
             const number = button.value;
             display.textContent += number;
             return secondNumber = display.textContent;
@@ -120,8 +122,10 @@ backspace.addEventListener('click', () => {
     let deleteTwo = display2.textContent;
     if (display2.textContent === '') {
         display.textContent = deleteOne.slice(1);
-    } else if (display.textContent === ''){
+    } else if (display.textContent === '') {
         display2.textContent = deleteTwo.slice(0, -1);
+    } else if (display.textContent != '' && display2.textContent != '') {
+        display.textContent = deleteOne.slice(1);
     }
 })
 
