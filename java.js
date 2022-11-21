@@ -69,7 +69,7 @@ document.addEventListener('keydown', (event) => {
     } else if (event.code === 'Equal' && event.shiftKey) {
         document.getElementById('add').click();
 
-    } else if (event.code === 'Equal') {
+    } else if (event.code === 'Equal' || event.code === 'Enter') {
         document.getElementById('equals').click();
 
     } else if (event.code === 'Period') {
